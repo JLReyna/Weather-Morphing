@@ -1,0 +1,228 @@
+################################################################################
+April 4, 2014, PLEASE NOTE:
+
+On July 17, 2013 users were notified that the BCCA
+precipitation had a dry bias over much of the contiguous U.S., and more
+especially over the central and eastern U.S.  This bias has been corrected
+with a simple bias-correction in the monthly means.  Please see the Errata document
+for more information regarding this issue and correction.  The corrected
+BCCA precipitation archive files are referred to as BCCAv2 and were put into
+place on April 4, 2014. Documentation including the Errata document will be
+updated soon to relect this correction. 
+
+
+################################################################################
+Downscaled Climate Projections Archive
+	Version 2.1
+	Date    22-July-2014
+
+Development Group: 
+U.S. Bureau of Reclamation Technical Service Center
+Santa Clara University,
+Lawrence Livermore National Laboratory,
+Climate Central,
+Climate Analytics Group,
+Scripps Institution of Oceanography,
+U.S. Army Corps of Engineers,
+U.S. Geological Survey
+National Center for Atmospheric Research
+
+I. 	Terms of Use
+
+These projections are being distributed to interested users for
+consideration in research to planning applications. Such applications may
+include any project carried out by an individual or organized by a
+university, a scientific institute, public agency, or private sector entity
+for research or planning purposes. Any decision to use these projections is
+at the interested user's discretion and subject to the Disclaimer provided
+below.
+
+II. 	Disclaimer
+
+These projections are being made available to provide immediate access for
+the convenience of interested persons. They are being made available by
+Archive Collaborators (i.e. Bureau of Reclamation, Climate Analytics Group,
+Climate Central, Lawrence Livermore National Laboratory, Santa Clara
+University, Scripps Institution of Oceanography, U.S. Army Corps of
+Engineers, U.S. Geological Survey, and National Center for Atmospheric
+Research. Archive Collaborators believe the information to be correct
+representations of potential high-resolution climate/hydrologic variations
+and changes subject to the limitations of the CMIP3 and CMIP5 global climate
+simulations, and the downscaling methods and their limitations, as described
+elsewhere in this web site. However, human and mechanical errors remain
+possibilities. Therefore, Archive Collaborators do not guarantee the
+accuracy, completeness, timeliness, or correct sequencing of the
+information. Also, neither Archive Collaborators, nor any of the sources of
+the information shall be responsible for any errors or omissions, or for the
+use or results obtained from the use of this information. 
+
+III. Acknowledgements and Citation of these Projections
+
+Whenever you publish research based on projections from this archive, please
+include two acknowledgements:
+
+1. First, acknowledge the superceding CMIP3 effort. The following is language
+suggested by the CMIP3 archive hosts at PCMDI: "We acknowledge the modeling
+groups, the Program for Climate Model Diagnosis and Intercomparison (PCMDI)
+and the WCRP's Working Group on Coupled Modelling (WGCM) for their roles in
+making available the WCRP CMIP3 multi-model dataset. Support of this dataset
+is provided by the Office of Science, U.S. Department of Energy." PCMDI also
+requests that in first making reference to the projections from this
+archive, please first reference the CMIP3 dataset by including the phrase
+"the World Climate Research Programme's (WCRP's) Coupled Model
+Intercomparison Project phase 3 (CMIP3) multi-model dataset". Subsequent
+references within the same publication might refer to the CMIP3 data with
+terms such as "CMIP3 data", "the CMIP3 multi-model dataset", "the CMIP3
+archive", or the "CMIP3 dataset".
+
+2. Second, generally acknowledge this archive as "Bias Corrected and Downscaled
+WCRP CMIP3 Climate Projections" archive at
+http://gdo-dcp.ucllnl.org/downscaled_cmip3_projections/. To reference
+specific information in the archive, you also use the following references:
+
+o (for BCSD climate projections) Maurer, E. P., L. Brekke, T. Pruitt, and P.
+B. Duffy (2007), 'Fine-resolution climate projections enhance regional
+climate change impact studies', Eos Trans. AGU, 88(47), 504.
+
+o (for BCCA climate projections) Maurer, E.P., H.G. Hidalgo, T. Das, M.D.
+Dettinger, and D.R. Cayan, 2010, 'The utility of daily large-scale climate
+data in the assessment of climate change impacts on daily streamflow in
+California', Hydrology and Earth System Sciences, 14, 1125-1138,
+doi:10.5194/hess-14-1125-2010.
+
+o (for BCSD hydrologic projections) Reclamation, 2011. 'West-Wide Climate Risk
+Assessments: Bias-Corrected and Spatially Downscaled Surface Water
+Projections', Technical Memorandum No. 86-68210-2011-01, prepared by the
+U.S. Department of the Interior, Bureau of Reclamation, Technical Services
+Center, Denver, Colorado. 138pp.
+
+o (for BCSD CMIP5 hydrologic projections) you can reference the technical
+memorandum using the following citation: Reclamation, 2014. 'Downscaled
+CMIP3 and CMIP5 Climate and Hydrology Projections: Release of Hydrology
+Projections, Comparison with preceding Information, and Summary of User
+Needs', prepared by the U.S. Department of the Interior, Bureau of
+Reclamation, Technical Services Center, Denver, Colorado. 110 pp. 
+
+
+################################################################################
+
+================================================================================
+Requested products directory structure
+================================================================================
+ rgrd3    - 2 degree regridded cmip3 GCM projections
+ bc3      - 2 degree Bias-Corrected cmip3 GCM projections
+ bcsd3    - 1/8 degree bias-corrected & downscaled cmip3 GCM projections (monthly)
+ bcca3    - 1/8 degree bias-corrected & downscaled cmip3 GCM projections (daily)
+ hydro3   - 1/8 degree VIC hydrology projections based on cmip3 BCSD projections
+
+ rgrd5    - 1 degree regridded cmip5 GCM projections
+ bc5      - 1 degree Bias-Corrected cmip5 GCM projections
+ bcsd5    - 1/8 degree bias-corrected & downscaled cmip5 GCM projections (monthly)
+ bcca5    - 1/8 degree bias-corrected & downscaled cmip5 GCM projections (daily)
+ hydro5   - 1/8 degree VIC hydrology projections based on cmip5 BCSD projections
+
+ 1_8obs   - 1/8 degree observed (Maurer 2002) data
+ 1obs     - 1 degree regridded observed (Maurer 2002) data
+ 2obs     - 2 degree regridded observed (Maurer 2002) data
+
+
+================================================================================
+For NetCDF data requests (*.nc)
+================================================================================
+The netcdf header contains infomation about data attributes.
+
+Extracted Data Series files
+---------------------------
+Extraction_<variable(s)>.nc, where
+variable(s) = Prcp, Tavg, or TavgPrcp
+
+Statistics files
+----------------
+PeriodStats.nc
+SpatialStats.nc
+
+Projections Order key file (associated with run axis in the .nc file)
+---------------------------------------------------------------------
+Projections3.txt   - cmip3 projections
+Projections5.txt   - cmip5 projections
+
+
+================================================================================
+For ASCII comma-delimited (csv) data requests (*.csv)
+================================================================================
+
+Extracted Data Series files
+---------------------------
+<scenario.model.run>.<variable>.csv
+
+where,
+ Variables:
+ # BCSD archive - monthly data
+  Tavg - Average Surface Air Temperature (deg C)
+  Prcp - Average Precipitation Rate (mm/day)
+
+ # BCCA archive - daily data
+  pr - Precipitation Rate (mm/day)
+  tasmin - Minimum Surface Air Temperature (deg C)
+  tasmax - Maximum Surface Air Temperature (deg C)
+
+ # Hyrdology archive - monthly data
+  prcp       - Total monthly precipitation (mm)
+  tmax       - mean monthly maximum daily temperature (deg C)
+  tmin       - mean monthly minimum daily temperature (deg C)
+  wind       - mean monthly wind speed (m/s)
+  smc        - soil moisture content, state 1st day of month (mm)
+  swe        - snow water equivalent in snow pack, state 1st day of month (mm)
+  streamflow - surface runoff + baseflow (mm)
+  et         - actual ET (mm)
+  petnatveg  - natural vegetaion PET (mm)
+  petwater   - open water surface PET (mm)
+  pettall    - tall reference crop PET (mm)
+  petshort   - short reference crop PET (mm)
+
+
+# Row/Column information 
+ASCII table rows and columns depend on data request:
+-- time (rows) 		x run (columns)
+-- time (rows) 		x latitude (columns)
+-- time (rows) 		x longitude (columns)
+-- run (rows) 		x latitude (columns)
+-- run (rows) 		x longitude (columns)
+-- latitude (rows) 	x longitude (columns)
+ROWS_Tavg.txt - time, latitude, or longitude
+COLS_Tavg.txt - run, latitude, or longitude
+ROWS_Prcp.txt - time, latitude, or longitude
+COLS_Prcp.txt - run, latitude, or longitude
+
+
+Statistics files
+----------------
+<variable>_<statistic_type>_<statistic>.csv
+
+where,
+ variable:
+    same as Variable list above
+
+ statistic type = 
+  SpatialStat, or...
+  PeriodStat
+ statistic:
+  stdev - standard deviation
+  mean  - grid-cell-area-weighted mean
+
+
+File Metadata
+-------------
+Info_<statistic_type>.txt
+
+where,
+ statistic_type = PeriodStat or SpatialStat
+
+
+Row/Column information 
+----------------------
+ROWS_PeriodStat.txt - projection or latitude
+COLS_PeriodStat.txt - projection or longitude
+ROWS_SpatialStat.txt - time, days from 1950-1-1
+COLS_SpatialStat.txt - projection, <scenario.model.run>
+
